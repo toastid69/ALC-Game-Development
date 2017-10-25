@@ -16,7 +16,6 @@ public class GhostAI : MonoBehaviour
 			transform.LookAt(target);
 			transform.Translate(Vector3.forward*moveSpeed*Time.deltaTime);
 		}
-
 	}
 
 	/*void onCollisionEnter(Collisio other)
