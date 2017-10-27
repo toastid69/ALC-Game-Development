@@ -18,18 +18,17 @@ public class Flashlight : MonoBehaviour {
 
 	void Update ()
 	{
-		if (Input.GetKeyUp (KeyCode.F) && lightOn)
+		if (Input.GetKeyUp (KeyCode.L) && lightOn)
 		{
 			lightOn = false;
 			light.enabled = false;
 		}
 
-		else if (Input.GetKeyUp (KeyCode.F) && !lightOn)
+		else if (Input.GetKeyUp (KeyCode.L) && !lightOn)
 		{
 			lightOn = true;
 			light.enabled = true;
 		}
 	}
 	
-	}
 }

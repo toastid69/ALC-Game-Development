@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class GhostAI : MonoBehaviour 
-{
+public class GhostAI : MonoBehaviour {
+
 	public float moveSpeed;
 
 	public Transform target;
@@ -11,22 +11,9 @@ public class GhostAI : MonoBehaviour
 
 	void OnTriggerStay(Collider other)
 	{
-		if(other.gameObject.name == "Player")
-		{
+		if(other.gameObject.name == "Player"){
 			transform.LookAt(target);
 			transform.Translate(Vector3.forward*moveSpeed*Time.deltaTime);
 		}
 	}
-
-	/*void onCollisionEnter(Collisio other)
-	{ 
-		var hit = other.gameObject;
-		var health = hit.GetComponent<playerHealth>();
-
-		if(health != null)
-		{
-			health.TakeDamage(damage);
-		}
-
-	} */
 }
