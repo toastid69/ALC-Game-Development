@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class Flashlight : MonoBehaviour {
+public class FlashLight : MonoBehaviour {
 
 	public bool lightOn;
 
@@ -29,6 +29,13 @@ public class Flashlight : MonoBehaviour {
 			lightOn = true;
 			light.enabled = true;
 		}
+	}
+	public void setLightOn(){
+		lightOn = true;
+	}
+
+	public bool isLightOn(){
+		return lightOn;
 	}
 	
 }
