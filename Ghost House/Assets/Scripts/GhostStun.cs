@@ -26,7 +26,7 @@ public class GhostStun : MonoBehaviour {
 		print("Collider" + flash);
 		if(other.gameObject.name == "Ghost" && flash == true){
 			print("Ghost is stunned!");
-			other.getComponent<GhostAI>().moveSpeed = 0f;
+			other.GetComponent<GhostAI>().moveSpeed = 0f;
 			StartCoroutine(Wait(5));
 		}
 	}
