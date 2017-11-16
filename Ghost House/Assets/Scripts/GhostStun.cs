@@ -3,14 +3,14 @@ using System.Collections;
 
 public class GhostStun : MonoBehaviour {
 	bool lightCheck;
-	FlashLight flash;
+	public FlashLight flash;
 	public GameObject ghost;
 
 	// Use this for initialization
 
 	void Start () {
 		flash = gameObject.GetComponentInChildren<Light>().GetComponentInChildren<FlashLight>();
-		print("Obj:" + flash);
+		print("Obj:"+flash);
 		flash.setLightOn();
 		print("Start" + flash.isLightOn());
 	
@@ -28,13 +28,14 @@ public class GhostStun : MonoBehaviour {
 			print("Ghost is stunned!");
 
 			other.GetComponent<GhostAI>().moveSpeed = 0f;
-			// StartCoroutine(Wait(5));
+			StartCoroutine(Wait(5, other));
+			// StopCoroutineWait(Wait(5));
 		}
 	}
 
-	IEnumerator Wait(float time){
+	IEnumerator Wait(float time, Collider other){
 		yield return new WaitForSeconds(time);
-		ghost.GetComponent<GhostAI>().moveSpeed = 5f;
+		other.gameObject.GetComponent<GhostAI>().moveSpeed = 5f;
 		print("Ghost is unstunned.");
 	}
 }
