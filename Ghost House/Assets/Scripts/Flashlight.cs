@@ -6,18 +6,25 @@ public class FlashLight : MonoBehaviour {
 
 	public bool lightOn;
 
+	//Flashlight power capacity
+	public int maxPower = 4;
+	//Useable flashlight power
+	public int currentPower;
+
 	Light light;
 
-	void Start ()
-	{
+	void Start () {
+		//Add power to flashlight
+		currentPower = maxPower;
+		print("power = " + currentPower);
+
 		light = GetComponent<Light> ();
 		//Set Light default to ON
 		lightOn = true;
 		light.enabled = true;
 	}
 
-	void Update ()
-	{
+	void Update () {
 		if (Input.GetKeyUp (KeyCode.L) && lightOn)
 		{
 			lightOn = false;
