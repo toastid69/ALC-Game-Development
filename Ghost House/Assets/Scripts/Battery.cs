@@ -5,7 +5,7 @@ public class Battery : MonoBehaviour {
 
 	public int power = 4;
 
-	public GameObject flashlight
+	public GameObject flashlight;
 
 	// Use this for initialization
 	void Start () {
