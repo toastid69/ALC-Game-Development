@@ -24,7 +24,7 @@ public class CameraFollow : MonoBehaviour {
 
 		//Change camera rotation
 		Quaternion toRot = Quaternion.LookRotation(target.position - myTrans.position, target.up);
-		Quaternion curRot = Quaternion.Slerp(myTrans.rotation, toRot, distDamp * Time.deltaTime);
+		Quaternion curRot = Quaternion.Slerp(myTrans.rotation, toRot, rotDamp * Time.deltaTime);
 		myTrans.rotation = curRot;
 	}
 }
