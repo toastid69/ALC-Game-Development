@@ -3,7 +3,7 @@ using System.Collections;
 
 public class CameraFollow : MonoBehaviour {
 	public Transform target;
-	public Vector3 defaultDistance = new Vector3(0f,0f,-10f);
+	public Vector3 defaultDistance = new Vector3(0f,2f,-5f);
 	public float distDamp = 10f;
 	public float rotDamp = 10f;
 
